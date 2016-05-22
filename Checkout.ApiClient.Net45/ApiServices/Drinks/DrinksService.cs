@@ -1,4 +1,5 @@
-﻿using Checkout.ApiServices.Drinks.ResponseModels;
+﻿using Checkout.ApiServices.Drinks.RequestModels;
+using Checkout.ApiServices.Drinks.ResponseModels;
 using Checkout.ApiServices.SharedModels;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,16 @@ namespace Checkout.ApiServices.Drinks
 {
     public class DrinksService
     {
-        public HttpResponse<DrinkInventoryList> GetDrinksList()
+        public HttpResponse<List<DrinkInventory>> GetDrinksList()
         {
             var getDrinksListUri = ApiUrls.Drinks;
 
-            var kuku = new ApiHttpClient().GetRequest<List<DrinkInventory>>(getDrinksListUri, AppSettings.SecretKey);
+            return new ApiHttpClient().GetRequest<List<DrinkInventory>>(getDrinksListUri, AppSettings.SecretKey);
+        }
 
-            return null;
+        public HttpResponse<OkResponse> CreateDrink(DrinkInventoryRequest request)
+        {
+            return new ApiHttpClient().PostRequest<OkResponse>(ApiUrls.Drinks, AppSettings.SecretKey, request);
         }
     }
 }
