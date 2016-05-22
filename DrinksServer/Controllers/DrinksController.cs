@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DrinksServer.Controllers.DTOs;
+using DrinksServer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +11,18 @@ namespace DrinksServer.Controllers
 {
     public class DrinksController : ApiController
     {
-        // GET: api/Drinks
-        public IEnumerable<string> Get()
+        private IDrinksRepository _drinksRepository;
+
+        public DrinksController(IDrinksRepository drinksRepository)
         {
-            return new string[] { "value1", "value2" };
+            _drinksRepository = drinksRepository;
+        }
+
+        // GET: api/Drinks
+        public IEnumerable<DrinkDTO> Get()
+        {
+            return _drinksRepository.GetAll()
+                .Select(drinkInventory => new DrinkDTO(drinkInventory));
         }
 
         // GET: api/Drinks/5

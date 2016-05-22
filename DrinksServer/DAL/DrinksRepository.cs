@@ -6,7 +6,7 @@ using System.Web;
 
 namespace DrinksServer.DAL
 {
-    public class DrinksInventory : IDrinksRepository
+    public class DrinksRepository : IDrinksRepository
     {
 
         private List<DrinkInventory> _allDrinks = new List<DrinkInventory>();
