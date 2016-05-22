@@ -8,6 +8,9 @@ namespace DrinksServer.DAL
 {
     public class DrinksInventory : IDrinksRepository
     {
+
+        private List<DrinkInventory> _allDrinks = new List<DrinkInventory>();
+
         public DrinkInventory Get(string drinkName)
         {
             throw new NotImplementedException();
@@ -15,7 +18,7 @@ namespace DrinksServer.DAL
 
         public IEnumerable<DrinkInventory> GetAll()
         {
-            throw new NotImplementedException();
+            return _allDrinks;
         }
     }
 }
