@@ -20,9 +20,16 @@ namespace ClientTestApp
 
             var request = new DrinkInventoryRequest { DrinkName = "wot", Quantity = 88 };
             var response = _client.DrinksService.CreateDrink(request);
-            Console.WriteLine("Create drink response: {0}", response.HttpStatusCode);
+            Console.WriteLine("Create drink response: {0}", response);
 
             PrintList();
+
+            var updateRequest = new DrinkInventoryRequest { DrinkName = "WOT", Quantity = 45 };
+            response = _client.DrinksService.UpdateDrink(updateRequest);
+            Console.WriteLine("Update drink response: {0}", response);
+
+            PrintList();
+
         }
 
         private static void PrintList()

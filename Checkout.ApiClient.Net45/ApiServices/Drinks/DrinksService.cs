@@ -22,5 +22,11 @@ namespace Checkout.ApiServices.Drinks
         {
             return new ApiHttpClient().PostRequest<OkResponse>(ApiUrls.Drinks, AppSettings.SecretKey, request);
         }
+
+        public HttpResponse<OkResponse> UpdateDrink(DrinkInventoryRequest updateRequest)
+        {
+            var url = string.Format(ApiUrls.Drink, updateRequest.DrinkName);
+            return new ApiHttpClient().PutRequest<OkResponse>(url, AppSettings.SecretKey, updateRequest);
+        }
     }
 }

@@ -177,7 +177,15 @@ public class ApiUrls
     {
         get
         {
-            return _customersApiUri = string.Concat(AppSettings.BaseApiUri, "/drinks");
+            return string.Concat(AppSettings.BaseApiUri, "/drinks");
+        }
+    }
+
+    public static string Drink
+    {
+        get
+        {
+            return string.Concat(AppSettings.BaseApiUri, "/drinks/{0}");
         }
     }
 
