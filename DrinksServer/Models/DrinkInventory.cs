@@ -26,5 +26,12 @@ namespace DrinksServer.Models
         {
             Quantity = quantity;
         }
+
+        public bool ChangeQuantity(int quantity)
+        {
+            // TDOO: some business logic here
+            Quantity = quantity;
+            return true;
+        }
     }
 }

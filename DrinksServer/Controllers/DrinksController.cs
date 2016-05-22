@@ -43,8 +43,16 @@ namespace DrinksServer.Controllers
         }
 
         // PUT: api/Drinks/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(string name, [FromBody]DrinkDTO drinkDto)
         {
+            var drinkInventory = _drinksRepository.Get(name);
+            if (drinkInventory == null)
+            {
+                return NotFound();
+            }
+
+            var succeeded = drinkInventory.ChangeQuantity(drinkDto.Quantity);
+            return succeeded ? (IHttpActionResult)Ok() : BadRequest("illegal quantity");
         }
 
         // DELETE: api/Drinks/5
