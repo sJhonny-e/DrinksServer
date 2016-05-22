@@ -90,6 +90,10 @@
     <Compile Include="ApiServices\Customers\ResponseModels\CustomerList.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ApiServices\Drinks\DrinksService.cs" />
+    <Compile Include="ApiServices\Drinks\RequestModels\DrinkInventoryRequest.cs" />
+    <Compile Include="ApiServices\Drinks\ResponseModels\DrinkInventory.cs" />
+    <Compile Include="ApiServices\Drinks\ResponseModels\DrinkInventoryList.cs" />
     <Compile Include="ApiServices\Lookups\LookupsService.cs" />
     <Compile Include="ApiServices\Lookups\ResponseModels\CountryInfo.cs" />
     <Compile Include="ApiServices\Reporting\ReportingService.cs" />
