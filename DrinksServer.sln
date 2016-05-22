@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinksServer", "DrinksServe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinksServer.Tests", "DrinksServer.Tests\DrinksServer.Tests.csproj", "{4C82A80E-AE70-4440-906E-719AF345B9BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.ApiClient.Net45", "Checkout.ApiClient.Net45\Checkout.ApiClient.Net45.csproj", "{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.ApiClient.Net45.Tests", "Checkout.ApiClient.Tests\Checkout.ApiClient.Net45.Tests.csproj", "{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4C82A80E-AE70-4440-906E-719AF345B9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C82A80E-AE70-4440-906E-719AF345B9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C82A80E-AE70-4440-906E-719AF345B9BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
