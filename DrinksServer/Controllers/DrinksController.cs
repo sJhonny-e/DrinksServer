@@ -33,8 +33,13 @@ namespace DrinksServer.Controllers
         }
 
         // POST: api/Drinks
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post([FromBody]DrinkDTO drinkDto)
         {
+            var drink = new Drink(drinkDto.DrinkName);
+            var drinkInventory = new DrinkInventory(drink, drinkDto.Quantity);
+
+            var succeeded = _drinksRepository.Add(drinkInventory);
+            return succeeded ? (IHttpActionResult)Ok() : BadRequest("A drink with this name already exists");
         }
 
         // PUT: api/Drinks/5

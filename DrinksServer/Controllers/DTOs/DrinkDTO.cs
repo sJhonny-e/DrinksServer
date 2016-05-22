@@ -11,6 +11,11 @@ namespace DrinksServer.Controllers.DTOs
         public string DrinkName { get; set; }
         public int Quantity { get; set; }
 
+        public DrinkDTO()
+        {
+
+        }
+
         public DrinkDTO(DrinkInventory drinkInventory)
         {
             DrinkName = drinkInventory.DrinkName;
