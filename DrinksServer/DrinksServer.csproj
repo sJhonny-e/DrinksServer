@@ -104,11 +104,13 @@
     <Compile Include="App_Start\IoCRegistrator.cs" />
     <Compile Include="App_Start\UnityResolver.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="DAL\DrinksInventory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Drink.cs" />
     <Compile Include="Models\DrinkInventory.cs" />
+    <Compile Include="Models\IDrinksRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
