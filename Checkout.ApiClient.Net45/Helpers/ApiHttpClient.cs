@@ -91,7 +91,7 @@ namespace Checkout
 
             if (AppSettings.DebugMode)
             {
-                Console.WriteLine(string.Format("\n\n** Request ** Post {0}", requestUri));
+                Console.WriteLine(string.Format("\n\n** Request ** Get {0}", requestUri));
             }
 
             return SendRequest<T>(httpRequestMsg).Result;
