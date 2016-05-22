@@ -16,7 +16,7 @@ namespace DrinksServer.App_Start
         public static void RegisterIoCContainer(HttpConfiguration config)
         {
             var container = new UnityContainer();
-            //container.RegisterType<IDefaultRepository, DefaultRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDrinksRepository, DrinksRepository>(new HierarchicalLifetimeManager());
             config.DependencyResolver = new UnityResolver(container);
         }
     }
