@@ -56,8 +56,10 @@ namespace DrinksServer.Controllers
         }
 
         // DELETE: api/Drinks/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(string name)
         {
+            var succeeded = _drinksRepository.Delete(name);
+            return succeeded ? (IHttpActionResult)Ok() : NotFound();
         }
     }
 }

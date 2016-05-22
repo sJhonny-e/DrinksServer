@@ -11,5 +11,6 @@ namespace DrinksServer.Models
         IEnumerable<DrinkInventory> GetAll();
         DrinkInventory Get(string drinkName);
         bool Add(DrinkInventory drinkInventory);
+        bool Delete(string drinkName);
     }
 }

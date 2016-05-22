@@ -44,5 +44,20 @@ namespace DrinksServer.Tests.DAL
             _repository.Add(bosco);
             Assert.AreEqual(bosco, _repository.Get("BosCO"));
         }
+
+        [Test]
+        public void Delete_WhenItemExists_RemovesFromRepository()
+        {
+            _repository.Add(bosco);
+
+            Assert.IsTrue(_repository.Delete("bosCo"));
+            Assert.IsNull(_repository.Get("bosco"));
+        }
+
+        [Test]
+        public void Delete_WhenItemDoesntExist_Fails()
+        {
+            Assert.IsFalse(_repository.Delete("bosCo"));
+        }
     }
 }

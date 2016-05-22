@@ -23,6 +23,18 @@ namespace DrinksServer.DAL
             return true;
         }
 
+        public bool Delete(string drinkName)
+        {
+            var drinkInventory = Get(drinkName);
+            if (drinkInventory == null)
+            {
+                return false;
+            }
+
+            _allDrinks.Remove(drinkInventory);
+            return true;
+        }
+
         public DrinkInventory Get(string drinkName)
         {
             return _allDrinks.FirstOrDefault(drinkInventory => drinkInventory.DrinkName.ToLower() == drinkName.ToLower());
