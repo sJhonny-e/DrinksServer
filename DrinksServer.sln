@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinksServer.Tests", "Drink
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.ApiClient.Net45", "Checkout.ApiClient.Net45\Checkout.ApiClient.Net45.csproj", "{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.ApiClient.Net45.Tests", "Checkout.ApiClient.Tests\Checkout.ApiClient.Net45.Tests.csproj", "{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTestApp", "ClientTestApp\ClientTestApp.csproj", "{3EA1B359-BBFD-4F6F-B154-0A7828D5F5ED}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C69B996-8AB6-4BA2-A5AE-58A350CBB34B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC891A3C-20BF-4AB7-9B39-6C4120F99EB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3EA1B359-BBFD-4F6F-B154-0A7828D5F5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3EA1B359-BBFD-4F6F-B154-0A7828D5F5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EA1B359-BBFD-4F6F-B154-0A7828D5F5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
