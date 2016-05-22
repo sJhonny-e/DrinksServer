@@ -34,5 +34,11 @@ namespace Checkout.ApiServices.Drinks
             var url = string.Format(ApiUrls.Drink, updateRequest.DrinkName);
             return new ApiHttpClient().PutRequest<OkResponse>(url, AppSettings.SecretKey, updateRequest);
         }
+
+        public HttpResponse<OkResponse> DeleteDrink(string drinkName)
+        {
+            var url = string.Format(ApiUrls.Drink, drinkName);
+            return new ApiHttpClient().DeleteRequest<OkResponse>(url, AppSettings.SecretKey);
+        }
     }
 }

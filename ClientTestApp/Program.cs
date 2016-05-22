@@ -31,6 +31,11 @@ namespace ClientTestApp
             var singleDrinkResponse = _client.DrinksService.GetDrink("wot");
             Console.WriteLine("Wot now has quantity of: {0}", singleDrinkResponse.Model.Quantity);
 
+            var deleteResponse = _client.DrinksService.DeleteDrink("wot");
+            Console.WriteLine("Delete drink response: {0}", deleteResponse);
+
+            PrintList();
+
         }
 
         private static void PrintList()
