@@ -18,6 +18,12 @@ namespace Checkout.ApiServices.Drinks
             return new ApiHttpClient().GetRequest<List<DrinkInventory>>(getDrinksListUri, AppSettings.SecretKey);
         }
 
+        public HttpResponse<DrinkInventory> GetDrink(string drinkName)
+        {
+            var url = string.Format(ApiUrls.Drink, drinkName);
+            return new ApiHttpClient().GetRequest<DrinkInventory>(url, AppSettings.SecretKey);
+        }
+
         public HttpResponse<OkResponse> CreateDrink(DrinkInventoryRequest request)
         {
             return new ApiHttpClient().PostRequest<OkResponse>(ApiUrls.Drinks, AppSettings.SecretKey, request);

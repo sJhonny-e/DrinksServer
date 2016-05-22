@@ -28,7 +28,8 @@ namespace ClientTestApp
             response = _client.DrinksService.UpdateDrink(updateRequest);
             Console.WriteLine("Update drink response: {0}", response);
 
-            PrintList();
+            var singleDrinkResponse = _client.DrinksService.GetDrink("wot");
+            Console.WriteLine("Wot now has quantity of: {0}", singleDrinkResponse.Model.Quantity);
 
         }
 
