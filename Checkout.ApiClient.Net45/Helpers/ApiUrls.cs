@@ -173,6 +173,14 @@ public class ApiUrls
         }
     }
 
+    public static string Drinks
+    {
+        get
+        {
+            return _customersApiUri = string.Concat(AppSettings.BaseApiUri, "/drinks");
+        }
+    }
+
     public static string Cards
     {
         get
