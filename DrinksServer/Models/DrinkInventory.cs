@@ -10,8 +10,14 @@ namespace DrinksServer.Models
         public Drink Drink { get; private set; }
         public int Quantity { get; private set; }
 
+        public string DrinkName { get { return Drink.Name; } }
+
         public DrinkInventory(Drink drink)
         {
+            if (drink == null)
+            {
+                throw new ArgumentNullException("drink");
+            }
             Drink = drink;
             Quantity = 0;
         }
