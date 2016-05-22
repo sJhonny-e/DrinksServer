@@ -16,7 +16,9 @@ namespace DrinksServer.App_Start
         public static void RegisterIoCContainer(HttpConfiguration config)
         {
             var container = new UnityContainer();
-            container.RegisterType<IDrinksRepository, DrinksRepository>(new HierarchicalLifetimeManager());
+            // dependency is registered as 'container controlled' since it keeps state for the duration of the application.
+            // TODO: change this to something more reasonable when using an actual data storage
+            container.RegisterType<IDrinksRepository, DrinksRepository>(new ContainerControlledLifetimeManager());
             config.DependencyResolver = new UnityResolver(container);
         }
     }
