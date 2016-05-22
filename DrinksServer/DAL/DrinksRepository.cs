@@ -13,7 +13,7 @@ namespace DrinksServer.DAL
 
         public DrinkInventory Get(string drinkName)
         {
-            throw new NotImplementedException();
+            return _allDrinks.FirstOrDefault(drinkInventory => drinkInventory.DrinkName.ToLower() == drinkName.ToLower());
         }
 
         public IEnumerable<DrinkInventory> GetAll()

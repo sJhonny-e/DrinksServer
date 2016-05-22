@@ -26,9 +26,10 @@ namespace DrinksServer.Controllers
         }
 
         // GET: api/Drinks/5
-        public string Get(int id)
+        public IHttpActionResult Get(string name)
         {
-            return "value";
+            var drinkInventory = _drinksRepository.Get(name);
+            return drinkInventory != null ? Ok(new DrinkDTO(drinkInventory)) : (IHttpActionResult)NotFound();
         }
 
         // POST: api/Drinks
